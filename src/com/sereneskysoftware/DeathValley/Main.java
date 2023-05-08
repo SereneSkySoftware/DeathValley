@@ -19,9 +19,6 @@ public class Main {
         int M = 200;
         System.out.println("WIDTH?");
         int W = Integer.parseInt(reader.readLine());
-        char[] inChars = new char[]{};
-//        int W = keyReader.readBuffered(inChars);
-        System.out.println("Inchars " + W);
 
         W = W / 2;
 
@@ -30,13 +27,11 @@ public class Main {
         int L = 10;
         int Y = W;
         int R = W;
-        int D = 999;
+        int D;
 
         //        Loop until we crash or get to the target
-        do { Thread.sleep(500);
+        do { Thread.sleep(250);
             do {
-//                D = (int) (Math.random() * 3) - 1;
-//                System.out.println("Random D: " + D);
                 D = ThreadLocalRandom.current().nextInt(-1, 2);
             } while (L + D < 0 || L + D > 20);
 
@@ -60,9 +55,9 @@ public class Main {
 // q = 113, p = 112, <- = 57419, -> = 57421
 //            Ctrl+C:
 
-            RawConsoleInput GC = new RawConsoleInput();
+//            RawConsoleInput GC ;//= new RawConsoleInput();
 
-            int I = GC.read(false);
+            int I = RawConsoleInput.read(false);
 //            System.out.println("I from SIR " + I);
 //            Handle a ctrl+c by crashing the spaceship!
             if (I == 3) weCrashed = true;
@@ -89,9 +84,6 @@ public class Main {
             System.out.println("YOU CRASHED INTO THE WALL");
             System.out.println("AND DISINTEGRATED");
         }
-    }
-
-    private static void crashRoutine() {
     }
 
     private static void goSub1000(int N) {
