@@ -61,7 +61,6 @@ public class Main {
 // q = 113, p = 112, <- = 57419, -> = 57421, Ctrl+C: 3
 
             int I = RawConsoleInput.read(false);
-//            System.out.println("I from SIR " + I);
 //            Handle a ctrl+c by crashing the spaceship!
             if (I == 3) weCrashed = true;
             if (I == 113) {
