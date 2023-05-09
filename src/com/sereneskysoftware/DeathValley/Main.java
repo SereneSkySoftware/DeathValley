@@ -1,3 +1,10 @@
+// The ZX81 Death Valley Game!
+// Run in a terminal with
+// java -jar .\DeathValley.jar
+
+// Deliberately unimproved, and structured sort-of-like-BASIC-ish
+// for historical an authenticity reasons...
+
 package com.sereneskysoftware.DeathValley;
 
 import java.io.BufferedReader;
