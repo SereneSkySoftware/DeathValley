@@ -72,7 +72,6 @@ public class Main {
             }
 
             if (Y < 1 || R < 1) {
-//            crashRoutine();
                 weCrashed = true;
             } else {
                 S++;
