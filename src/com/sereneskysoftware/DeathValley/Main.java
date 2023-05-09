@@ -3,7 +3,7 @@
 // java -jar .\DeathValley.jar
 
 // Deliberately unimproved, and structured sort-of-like-BASIC-ish
-// for historical an authenticity reasons...
+// for historical and authenticity reasons...
 
 package com.sereneskysoftware.DeathValley;
 
@@ -16,8 +16,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
-        BufferedReader reader = new BufferedReader(
-                new InputStreamReader(System.in));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.println("DEATH VALLEY");
 //        No of goes
@@ -37,7 +36,8 @@ public class Main {
         int D;
 
         //        Loop until we crash or get to the target
-        do { Thread.sleep(250);
+        do {
+            Thread.sleep(250);
             do {
                 D = ThreadLocalRandom.current().nextInt(-1, 2);
             } while (L + D < 0 || L + D > 20);
@@ -45,7 +45,6 @@ public class Main {
             L = L + D;
             Y = Y - D;
             R = R + D;
-
 
             int N = L;
             goSub1000(N);
@@ -59,10 +58,7 @@ public class Main {
             goSub1000(N);
             System.out.println("I");
 
-// q = 113, p = 112, <- = 57419, -> = 57421
-//            Ctrl+C:
-
-//            RawConsoleInput GC ;//= new RawConsoleInput();
+// q = 113, p = 112, <- = 57419, -> = 57421, Ctrl+C: 3
 
             int I = RawConsoleInput.read(false);
 //            System.out.println("I from SIR " + I);
@@ -98,5 +94,4 @@ public class Main {
             System.out.print(" ");
         }
     }
-
 }
